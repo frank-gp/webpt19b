@@ -1,7 +1,7 @@
 // Import required modules
 const express = require("express");
 const cors = require("cors");
-const tempData = require("./tempData.js");
+const database1 = require("./database1.js");
 const path = require("path");
 
 // Create an Express app
@@ -51,7 +51,7 @@ app.get("/reset", (req, res) => {
 app.get("/", (req, res) => {
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
-  const shuffledData = shuffleArray([...tempData]);
+  const shuffledData = shuffleArray([...database1]);
   const selectedMovies = shuffledData.slice(0, requestedQuantity);
   res.json(selectedMovies);
 });
@@ -60,7 +60,7 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
   visitCounts["/:id"]++;
   const movieId = parseInt(req.params.id);
-  const movie = tempData.find((m) => m.id === movieId);
+  const movie = database1.find((m) => m.id === movieId);
 
   if (!movie) {
     return res.status(404).json({ error: "Movie not found" });

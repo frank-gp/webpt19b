@@ -1,4 +1,4 @@
-const tempData = [
+const database1 = [
   {
     id: 1,
     title: "Granizo 2024",
@@ -309,5 +309,5 @@ const tempData = [
   },
 ];
 
-module.exports = tempData;
+module.exports = database1;
 
