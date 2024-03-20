@@ -1,0 +1,73 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://frankgp.com/component/layout.js" type="module"></script>
+    <title>Visit Counts</title>
+    <style>
+      #visit-counts td {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Visit Counts</h1>
+      <table id="visit-counts">
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>Visit Count</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="reset-btn">Reset Visits</button>
+
+      <script>
+        // Function to reset visit counts
+        const resetVisits = () => {
+          fetch("../reset")
+            .then((response) => response.json())
+            .then((data) => {
+              // Update visit counts display
+              const visitCountsTable = document.getElementById("visit-counts").querySelector("tbody");
+              visitCountsTable.innerHTML = ""; // Clear existing table rows
+              for (const endpoint in data.visitCounts) {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                <td><strong>${endpoint}</strong></td>
+                <td>${data.visitCounts[endpoint]}</td>
+              `;
+                visitCountsTable.appendChild(row);
+              }
+            })
+            .catch((error) => console.error("Error resetting visit counts:", error));
+        };
+
+        // Fetch visit counts on page load
+        fetch("../visit-counts")
+          .then((response) => response.json())
+          .then((data) => {
+            const visitCounts = data.visitCounts;
+            const visitCountsTable = document.getElementById("visit-counts").querySelector("tbody");
+            for (const endpoint in visitCounts) {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+              <td><strong>${endpoint}</strong></td>
+              <td>${visitCounts[endpoint]}</td>
+            `;
+              visitCountsTable.appendChild(row);
+            }
+          })
+          .catch((error) => console.error("Error fetching visit counts:", error));
+
+        // Add event listener to reset button
+        document.getElementById("reset-btn").addEventListener("click", resetVisits);
+      </script>
+    </main>
+  </body>
+</html>
