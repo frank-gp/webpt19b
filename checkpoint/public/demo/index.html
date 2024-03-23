@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen de JavaScript</title>
+    <title>Simulacro Checkpoint | Examen simulacro</title>
+    <meta property="og:image" content="https://i.postimg.cc/L4TnbZts/fb-cover-simulacro.webp" />
+    <meta name="description" content="Simulacro para el checkpoin de SoyHenry, descubre que temas te falta aprender o revisar">
+    <script src="https://frankgp.com/component/stat.js" type="module"></script>
+    <!-- <script>
+      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+        var script = document.createElement("script");
+        script.src = "https://frankgp.com/component/stat.js";
+        script.type = "module";
+        document.head.appendChild(script);
+      }
+    </script> -->
+    <!-- <script src="https://frankgp.com/component/layout.js" type="module"></script> -->
+    <script src="https://webpt19b.web.app/component/header.js" type="module"></script>
+    <script src="https://webpt19b.web.app/component/head.js" type="module"></script>
+    <script src="https://webpt19b.web.app/component/footer.js" type="module"></script>
     <style>
       @keyframes opacityLoop {
         0% {
@@ -22,34 +37,61 @@
         text-align: center;
         font-size: 5em;
       }
-      button:disabled, button:disabled:hover {
-        /* Your styles for disabled button here */
-        opacity: 0.3; /* Example: reduce opacity */
-        cursor: not-allowed; /* Example: change cursor to not-allowed */
-        /* Add any other styles you want */
+      button:disabled,
+      button:disabled:hover {
+        opacity: 0.3;
+        cursor: not-allowed;
       }
       h3 {
         max-width: 45ch;
       }
-      .btn:hover, button:hover {
+      .btn:hover,
+      button:hover {
         color: white !important;
         opacity: 1;
       }
+      #preguntaContainer ul > li {
+        margin: 1em;
+        margin-left: 3em;
+      }
+      #preguntaContainer label,
+      input {
+        cursor: pointer !important;
+      }
+      main {
+        /* min-height: 100vh; */
+        margin: 10vh auto !important;
+      }
+
+      /* .containerButtons{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+      } */
+      .active {
+        background-color: cornflowerblue;
+      }
+      #resultado {
+        font-size: 2em;
+        color: khaki;
+      }
+      pre {
+        border: 1px solid #fff8;
+      }
     </style>
-    <script src="https://frankgp.com/component/stat.js" type="module"></script>
-    <script src="https://frankgp.com/component/layout.js" type="module"></script>
   </head>
   <body>
+    <header></header>
     <main>
+      <h2>Simulacro Checkpoint</h2>
       <div class="containerButtons"></div>
-
       <br />
-      <h1>Checkpoint</h1>
+      <h1 class="title"></h1>
       <br />
       <form id="examenForm">
         <div id="preguntaContainer"></div>
         <button type="submit" class="submit_btn">Enviar respuesta</button>
-        <button class="reload" style="display: none" onclick="location.reload()">reload</button>
+        <button class="reload" style="display: none" onclick="location.reload()">Intentar de nuevo</button>
       </form>
       <br />
       <h3 id="resultado">Tu puntaje actual es: 0/<span id="totalPreguntas"></span></h3>
@@ -57,93 +99,117 @@
       <br />
 
       <script>
-        const preguntaContainer = document.getElementById("preguntaContainer");
-        const examenForm = document.getElementById("examenForm");
-        const resultadoElement = document.getElementById("resultado");
-        const icono_respuesta = document.querySelector(".icono_respuesta");
-        const submit_btn = document.querySelector(".submit_btn");
-        const totalPreguntasSpan = document.getElementById("totalPreguntas");
+        function displayApi() {
+          const preguntaContainer = document.getElementById("preguntaContainer");
+          const examenForm = document.getElementById("examenForm");
+          const resultadoElement = document.getElementById("resultado");
+          const icono_respuesta = document.querySelector(".icono_respuesta");
+          const submit_btn = document.querySelector(".submit_btn");
+          const totalPreguntasSpan = document.getElementById("totalPreguntas");
 
-        let preguntas;
-        let preguntaActualIndex = 0;
-        let respuestasCorrectas = 0;
+          let preguntas;
+          let preguntaActualIndex = 0;
+          let respuestasCorrectas = 0;
 
-        // ========== localStorage... ==========
+          // ========== localstorage1... ==========
+          // var baseURL = "";
+          // var baseURL = "https://api.1rodemayo.com";
 
-        var baseURL = "";
-        var baseURL = "https://api.1rodemayo.com";
-        var apiURL1 = "/checkpoint";
-        var apiURL1 = baseURL + "/checkpoint";
+          var baseURL;
 
-        if (!localStorage.getItem("url")) {
-          localStorage.setItem("url", apiURL1);
-        }
-        var url = localStorage.getItem("url");
-
-        var jsonArrayButton = [
-          // { url: apiURL1, label: apiURL1 },
-          // { url: "/checkpoint/databaseHTML", label: "databaseHTML" },
-          { url: baseURL + "/checkpoint/databaseCSS", label: "CSS" },
-          { url: baseURL + "/checkpoint/databaseJS", label: "JS" },
-          { url: baseURL + "/checkpoint/databaseBootstrap", label: "Bootstrap" },
-          { url: baseURL + "/checkpoint/databaseNodeJS", label: "NodeJS" },
-          // { url: "http://127.0.0.1:3000/checkpoint/", label: "localhost" },
-        ];
-
-        function createButtons() {
-          var container = document.querySelector(".containerButtons");
-          jsonArrayButton.forEach((item) => {
-            var buttonHTML = `<button data-url="${item.url}">${item.label}</button>`;
-            container.insertAdjacentHTML("beforeend", buttonHTML);
-          });
-        }
-
-        // Function to handle the click event of the buttons
-        function handleButtonClick(event) {
-          var url = event.target.getAttribute("data-url");
-          localStorage.setItem("url", url);
-          // alert(`URL has been changed to '${url}'`);
-          location.reload();
-        }
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        createButtons();
-        document.querySelector(".containerButtons").addEventListener("click", function (event) {
-          if (event.target.tagName === "BUTTON") {
-            handleButtonClick(event);
+          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+            baseURL = "";
+          } else {
+            baseURL = "https://api.1rodemayo.com";
           }
-        });
-        // });
 
-        // ========== localStorage. ==========
+          // console.log("Base URL:", baseURL);
 
-        // Cargar preguntas desde data.json
-        fetch(url)
-          // fetch("./data3.json")
-          .then((response) => response.json())
-          .then((data) => {
-            preguntas = data;
-            totalPreguntasSpan.textContent = preguntas.length;
-            mostrarPregunta(preguntaActualIndex);
-            import("https://frankgp.com/lib/highlight.js");
-            // hljs.highlightAll();
+          var apiURL1 = baseURL + "/checkpoint";
+          // Extract the databaseM2_L6 part from the URL if present
+          const queryString = window.location.search;
+          const cleanQueryString = queryString.startsWith("?") ? queryString.substring(1) : queryString;
+          // console.log(cleanQueryString);
+
+          if (cleanQueryString) {
+            localStorage.setItem("url", baseURL + "/checkpoint/" + cleanQueryString);
+            var url = new URL(window.location.href);
+            url.searchParams.delete(cleanQueryString);
+            history.replaceState({}, "", url.href);
+          }
+
+          if (!localStorage.getItem("url")) {
+            localStorage.setItem("url", apiURL1);
+            console.log(apiURL1);
+          } else {
+            console.log(apiURL1);
+          }
+
+          var url = localStorage.getItem("url");
+          // ========== localstorage1. ==========
+
+          var jsonArrayButton = [
+            { url: baseURL + "/checkpoint/databaseCSS", label: "CSS" },
+            { url: baseURL + "/checkpoint/databaseJS", label: "JS" },
+            { url: baseURL + "/checkpoint/databaseBootstrap", label: "Bootstrap" },
+            { url: baseURL + "/checkpoint/databaseNodeJS", label: "NodeJS" },
+            { url: baseURL + "/checkpoint/databaseM1", label: "M1" },
+            { url: baseURL + "/checkpoint/databaseM2_L6", label: "M2_L6" },
+            { url: baseURL + "/checkpoint/databaseM2_L7", label: "M2_L7" },
+          ];
+
+          function createButtons() {
+            var container = document.querySelector(".containerButtons");
+            jsonArrayButton.forEach((item) => {
+              var buttonHTML = `<button data-url="${item.url}">${item.label}</button>`;
+              container.insertAdjacentHTML("beforeend", buttonHTML);
+            });
+            var button_url = document.querySelector(`button[data-url="${url}"]`);
+            if (button_url) button_url.classList.add("active");
+          }
+
+          function handleButtonClick(event) {
+            var url = event.target.getAttribute("data-url");
+            localStorage.setItem("url", url);
+            location.reload();
+          }
+
+          createButtons();
+          document.querySelector(".containerButtons").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+              handleButtonClick(event);
+            }
           });
 
-        function mostrarPregunta(index) {
-          const pregunta = preguntas[index];
-          const preguntaDiv = document.createElement("div");
-          preguntaDiv.classList.add("pregunta");
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              preguntas = data;
+              totalPreguntasSpan.textContent = preguntas.length;
+              mostrarPregunta(preguntaActualIndex);
+              if (preguntas[0].categoria) {
+                // console.log(preguntas[0].categoria);
+                document.querySelector(".title").innerHTML += preguntas[0].categoria;
+              }
+              import("https://frankgp.com/lib/highlight.js");
+            });
 
-          // Shuffle de las opciones
-          const opcionesAleatorias = pregunta.opciones.slice().sort(() => Math.random() - 0.5);
+          // ========== mostrarPregunta... ==========
 
-          preguntaDiv.innerHTML = `
+          function mostrarPregunta(index) {
+            const pregunta = preguntas[index];
+            const preguntaDiv = document.createElement("div");
+            preguntaDiv.classList.add("pregunta");
+
+            const opcionesAleatorias = pregunta.opciones.slice().sort(() => Math.random() - 0.5);
+
+            preguntaDiv.innerHTML = `
     <h3>${pregunta.pregunta}</h3>
     ${
       pregunta.codigo
         ? `
-      <h4>Código:</h4>
-      <pre><code>${pregunta.codigo.textarea}</code></pre>
+      <br>
+      <pre class="${pregunta.codigo.lag}"><code>${pregunta.codigo.snippet}</code></pre><br>
     `
         : ""
     }
@@ -161,56 +227,83 @@
     </ul>
   `;
 
-          preguntaContainer.innerHTML = "";
-          preguntaContainer.appendChild(preguntaDiv);
-        }
+            preguntaContainer.innerHTML = "";
+            preguntaContainer.appendChild(preguntaDiv);
+          }
 
-        examenForm.addEventListener("submit", function (event) {
-          event.preventDefault();
+          // ========== mostrarPregunta. ==========
 
-          const pregunta = preguntas[preguntaActualIndex];
-          const opciones = document.getElementsByName(`opcion-${pregunta.id}`);
-          let respuestaSeleccionada = null;
+          examenForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-          opciones.forEach((opcion) => {
-            if (opcion.checked) {
-              respuestaSeleccionada = opcion.value;
+            const pregunta = preguntas[preguntaActualIndex];
+            const opciones = document.getElementsByName(`opcion-${pregunta.id}`);
+            let respuestaSeleccionada = null;
+
+            opciones.forEach((opcion) => {
+              if (opcion.checked) {
+                respuestaSeleccionada = opcion.value;
+              }
+              // opcion.disabled = true;
+            });
+
+            if (respuestaSeleccionada === pregunta.respuestaCorrecta) {
+              respuestasCorrectas++;
+              resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ✅`;
+              icono_respuesta.textContent = `✅`;
+              icono_respuesta.style.display = "block";
+              document.querySelector("#resultado").style.color = "chartreuse";
+
+              import("https://frankgp.com/lib/highlight.js?" + Date.now());
+
+              preguntaActualIndex++;
+              if (preguntaActualIndex < preguntas.length) {
+                mostrarPregunta(preguntaActualIndex);
+                setTimeout(function () {
+                  icono_respuesta.style.display = "none";
+                  document.querySelector("#resultado").style.color = "white";
+                }, 3000);
+              } else {
+                resultadoElement.innerHTML = `🎉 Tu puntuación final es: ${respuestasCorrectas}/${preguntas.length}<br>¡Felicidades, has completado el examen! 💎<br>`;
+                submit_btn.disabled = true;
+                icono_respuesta.style.display = "block";
+                icono_respuesta.textContent = `🎉🏆🥇`;
+
+                var reload_button = document.querySelector(".reload");
+                reload_button.style.display = "block";
+              }
+            } else {
+              // mostrarPregunta(preguntaActualIndex);
+              resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ❌`;
+              icono_respuesta.textContent = `❌`;
+              icono_respuesta.style.display = "block";
+              submit_btn.disabled = true;
+              // setTimeout(function () {
+              //   icono_respuesta.style.display = "none";
+              // }, 3000);
+
+              var reload_button = document.querySelector(".reload");
+              reload_button.style.display = "block";
+
+              document.querySelector("#resultado").style.color = "red";
             }
           });
+        }
 
-          if (respuestaSeleccionada === pregunta.respuestaCorrecta) {
-            respuestasCorrectas++;
-            resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ✅`;
-            icono_respuesta.textContent = `✅`;
-            icono_respuesta.style.display = "block";
-            import("https://frankgp.com/lib/highlight.js?" + Date.now());
-
-            setTimeout(function () {
-              icono_respuesta.style.display = "none";
-            }, 3000);
-
-            preguntaActualIndex++;
-            if (preguntaActualIndex < preguntas.length) {
-              mostrarPregunta(preguntaActualIndex);
-            } else {
-              resultadoElement.textContent = `¡Felicidades, has completado el examen! Tu puntuación final es: ${respuestasCorrectas}/${preguntas.length}`;
-            }
-          } else {
-            // respuestasCorrectas = 0;
-            mostrarPregunta(preguntaActualIndex);
-            resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ❌`;
-            icono_respuesta.textContent = `❌`;
-            submit_btn.disabled = true;
-            icono_respuesta.style.display = "block";
-            setTimeout(function () {
-              icono_respuesta.style.display = "block";
-            }, 3000);
-
-            var reload_button = document.querySelector(".reload");
-            reload_button.style.display = "block";
-          }
-        });
+        // Check if the current date is April 19, 2024
+        var currentDate = new Date();
+        // if (currentDate.getDate() === 23 && currentDate.getMonth() === 2 && currentDate.getFullYear() === 2024) {
+        if (currentDate.getDate() === 19 && currentDate.getMonth() === 3 && currentDate.getFullYear() === 2024) {
+          document.querySelector("main").innerHTML = `<h1>Desactivado por ser dia del Checkpoint Official</h1>`;
+        } else {
+          displayApi();
+        }
       </script>
     </main>
+
+    <hr />
+    <p style="color: #fffc; text-align: center">este simulacro se desactivara el 19 de abril por ser dia de la checkpoint official</p>
+    <hr />
+    <footer></footer>
   </body>
 </html>

@@ -50,7 +50,7 @@ app.get("/reset", (req, res) => {
 // Endpoint to retrieve random movies with a specified quantity
 app.get("/", (req, res) => {
   visitCounts["/"]++;
-  const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
+  const requestedQuantity = parseInt(req.query.quantity) || 6; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...database1]);
   const selectedMovies = shuffledData.slice(0, requestedQuantity);
   res.json(selectedMovies);

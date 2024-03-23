@@ -47,8 +47,8 @@ app.get("/reset", (req, res) => {
 });
 
 // Endpoint to retrieve random movies with a specified quantity
+const database1 = require("./database1.js");
 app.get("/", (req, res) => {
-  const database1 = require("./database1.js");
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...database1]);
@@ -56,8 +56,8 @@ app.get("/", (req, res) => {
   res.json(selectedMovies);
 });
 
+const databaseCSS = require("./databaseCSS.js");
 app.get("/databaseCSS", (req, res) => {
-  const databaseCSS = require("./databaseCSS.js");
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...databaseCSS]);
@@ -65,8 +65,8 @@ app.get("/databaseCSS", (req, res) => {
   res.json(selectedMovies);
 });
 
+const databaseJS = require("./databaseJS.js");
 app.get("/databaseJS", (req, res) => {
-  const databaseJS = require("./databaseJS.js");
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...databaseJS]);
@@ -74,8 +74,8 @@ app.get("/databaseJS", (req, res) => {
   res.json(selectedMovies);
 });
 
+const databaseBootstrap = require("./databaseBootstrap.js");
 app.get("/databaseBootstrap", (req, res) => {
-  const databaseBootstrap = require("./databaseBootstrap.js");
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...databaseBootstrap]);
@@ -83,11 +83,38 @@ app.get("/databaseBootstrap", (req, res) => {
   res.json(selectedMovies);
 });
 
+const databaseNodeJS = require("./databaseNodeJS.js");
 app.get("/databaseNodeJS", (req, res) => {
-  const databaseNodeJS = require("./databaseNodeJS.js");
   visitCounts["/"]++;
   const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
   const shuffledData = shuffleArray([...databaseNodeJS]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
+
+const databaseM1 = require("./databaseM1.js");
+app.get("/databaseM1", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM1]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
+
+const databaseM2_L6 = require("./databaseM2_L6.js");
+app.get("/databaseM2_L6", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM2_L6]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
+
+const databaseM2_L7 = require("./databaseM2_L7.js");
+app.get("/databaseM2_L7", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 12; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM2_L7]);
   const selectedMovies = shuffledData.slice(0, requestedQuantity);
   res.json(selectedMovies);
 });

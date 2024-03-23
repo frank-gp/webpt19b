@@ -1,5 +1,5 @@
 * {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .navbar {
   background-color: #fff;
@@ -98,7 +98,6 @@
   object-fit: cover;
 }
 
-
 /* ========== footer... ========== */
 footer.container-fluid {
   background-color: #222;
@@ -109,11 +108,10 @@ footer h1 {
   font-size: 1.5em;
   color: white;
   margin: 2.2em auto;
-
 }
 footer .bi {
   color: white;
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 footer .img-fluid {

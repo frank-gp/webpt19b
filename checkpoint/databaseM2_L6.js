@@ -1,0 +1,121 @@
+// databaseM2_L6.js
+
+module.exports = [
+  {
+    id: 1,
+    pregunta: "¿Cuál es el concepto principal detrás de las operaciones asíncronas en JavaScript?",
+    opciones: [
+      "El script espera a que una tarea se complete antes de continuar con la siguiente",
+      "El script bloquea la ejecución del código hasta que todas las tareas estén completas",
+      "El script continúa ejecutando otras tareas sin esperar a que una tarea se complete",
+      "El script ejecuta todas las tareas en paralelo",
+    ],
+    respuestaCorrecta: "El script continúa ejecutando otras tareas sin esperar a que una tarea se complete",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 2,
+    pregunta: "¿Cuál es la definición de una promesa en programación?",
+    opciones: [
+      "Una estructura de datos en JavaScript",
+      "Una expresión de la voluntad de dar o hacer algo por alguien en el futuro",
+      "Una función que retorna un valor booleano",
+      "Un bucle de control en programación",
+    ],
+    respuestaCorrecta: "Una expresión de la voluntad de dar o hacer algo por alguien en el futuro",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 3,
+    pregunta: "¿Qué representa una promesa en programación?",
+    opciones: [
+      "Una acción o respuesta que ya ha ocurrido en el código",
+      "Un lugar reservado para una acción o respuesta futura",
+      "Una función que no devuelve ningún valor",
+      "Un error en el código",
+    ],
+    respuestaCorrecta: "Un lugar reservado para una acción o respuesta futura",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 4,
+    pregunta: "¿Qué son las promesas en JavaScript?",
+    opciones: [
+      "Estructuras de datos que representan el resultado eventual de una operación asincrónica",
+      "Variables que almacenan valores estáticos",
+      "Funciones que siempre devuelven un valor",
+      "Métodos para manejar errores de sintaxis",
+    ],
+    respuestaCorrecta: "Estructuras de datos que representan el resultado eventual de una operación asincrónica",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 5,
+    pregunta: "¿Cómo se pueden generar promesas en JavaScript?",
+    opciones: [
+      "Utilizando la estructura de datos Promise y la palabra clave new",
+      "Declarando una función que devuelve un objeto Promise",
+      "Usando la función async/await",
+      "Invocando directamente una promesa desde el código",
+    ],
+    respuestaCorrecta: "Utilizando la estructura de datos Promise y la palabra clave new",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 6,
+    pregunta: "¿Qué se imprime en la consola al ejecutar el siguiente código?",
+    codigo: {
+      lag: "javascript",
+      snippet: "const promesa1 = new Promise((resolve, reject)=>{\n    // empty\n})\n\nconsole.log(promesa1);",
+    },
+    opciones: ["Promise { <pending> }", "undefine", "null", "empty"],
+    respuestaCorrecta: "Promise { <pending> }",
+    categoria: "Modulo 2: L-06 Asincronismo",
+  },
+  {
+    id: 7,
+    pregunta: "¿Cuáles son los tres estados fundamentales que pueden tener las promesas en JavaScript?",
+    opciones: ["Pending, fulfilled, and rejected", "Active, completed, and canceled", "Started, paused, and finished", "Waiting, accepted, and denied"],
+    respuestaCorrecta: "Pending, fulfilled, and rejected",
+    categoria: "Modulo 2: L-06 Asincronismo",
+    seccion: "03 Promesas",
+  },
+  {
+    id: 8,
+    pregunta: "¿Qué métodos se utilizan para manejar el valor al que se resuelve o se rechaza una promesa en JavaScript?",
+    opciones: ["then y catch", "try y except", "resolve y reject", "await y async"],
+    respuestaCorrecta: "then y catch",
+    categoria: "Modulo 2: L-06 Asincronismo",
+    seccion: "",
+  },
+  {
+    id: 9,
+    pregunta:
+      "¿Qué operador especial se utiliza dentro de una función asíncrona en JavaScript para indicar que se debe esperar a que se resuelva una promesa antes de continuar con la ejecución?",
+    opciones: ["await", "async", "promise", "then"],
+    respuestaCorrecta: "await",
+    categoria: "Modulo 2: L-06 Asincronismo",
+    seccion: "",
+  },
+  {
+    id: 10,
+    pregunta: "¿Qué bloque se utiliza dentro de las funciones async en JavaScript para capturar y gestionar errores que podrían ocurrir durante la ejecución?",
+    opciones: ["try/catch", "if/else", "while/do-while", "for/in"],
+    respuestaCorrecta: "try/catch",
+    categoria: "Modulo 2: L-06 Asincronismo",
+    seccion: "",
+  },
+  {
+    id: 11,
+    pregunta: "¿Cuál es la función del módulo 'fs' en Node.js?",
+    opciones: [
+      "Facilitar la interacción con el sistema de archivos de un dispositivo",
+      "Realizar operaciones matemáticas avanzadas",
+      "Manipular el DOM en un navegador web",
+      "Controlar el acceso a la red",
+    ],
+    respuestaCorrecta: "Facilitar la interacción con el sistema de archivos de un dispositivo",
+    categoria: "Modulo 2: L-06 Asincronismo",
+    seccion: "06 file system fs",
+  },
+];
