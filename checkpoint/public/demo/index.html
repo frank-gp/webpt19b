@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simulacro Checkpoint | Examen simulacro</title>
     <meta property="og:image" content="https://i.postimg.cc/L4TnbZts/fb-cover-simulacro.webp" />
-    <meta name="description" content="Simulacro para el checkpoin de SoyHenry, descubre que temas te falta aprender o revisar">
+    <meta name="description" content="Simulacro para el checkpoin de SoyHenry, descubre que temas te falta aprender o revisar" />
     <script src="https://frankgp.com/component/stat.js" type="module"></script>
     <!-- <script>
       if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
@@ -83,6 +83,31 @@
   <body>
     <header></header>
     <main>
+      <section class="fgp_challenge_info" style="color: #fffc; text-align: center">
+        <h3 id="challengeText" style="display: none">CHALLENGE: lunes 25 de marzo <a class="btn" href="https://webpt19b.web.app/challenge">Mas info...</a></h3>
+        <style>
+          #challengeText {
+            text-align: center;
+            margin: 3em auto;
+            color: chartreuse;
+          }
+        </style>
+        <script>
+          // Get today's date
+          var currentDate = new Date();
+          // Target date (March 25th)
+          var targetDate = new Date(currentDate.getFullYear(), 2, 25); // Month is zero-based
+
+          // Check if the current date is on or before March 25th
+          if (currentDate >= targetDate) {
+            // If it is on or before March 25th, display the challenge text
+            document.getElementById("challengeText").style.display = "block";
+          } else {
+            // If it's after March 25th, hide the challenge text
+            document.getElementById("challengeText").style.display = "none";
+          }
+        </script>
+      </section>
       <h2>Simulacro Checkpoint</h2>
       <div class="containerButtons"></div>
       <br />
@@ -304,6 +329,7 @@
     <hr />
     <p style="color: #fffc; text-align: center">este simulacro se desactivara el 19 de abril por ser dia de la checkpoint official</p>
     <hr />
+
     <footer></footer>
   </body>
 </html>
