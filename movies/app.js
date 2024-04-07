@@ -9,8 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const url = "https://webpt19b.web.app";
 
+let database2 = [database1[0]];
+
 // Middleware setup
 app.use(cors());
+app.use(express.json());
 // app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -30,11 +33,49 @@ let visitCounts = {
   "/:id": 0,
 };
 
-// Endpoint to increment visit count for specified endpoint
-// app.get("/visit", (req, res) => {
-//   visitCounts["/visit"]++;
-//   res.json({ message: "Visit count incremented", visitCounts: visitCounts["/visit"] });
-// });
+app.get("/temp", (req, res) => {
+  res.json(database2);
+});
+
+app.post("/temp", (req, res) => {
+  database2.push(req.body);
+  res.json({ message: "successful", data: database2 });
+});
+
+app.get("/temp/reset", (req, res) => {
+  database2 = [database1[0]];
+  res.json({ message: "successful", data: database2 });
+});
+
+app.get("/temp/empty", (req, res) => {
+  database2 = [];
+  res.json({ message: "successful", data: database2 });
+});
+
+// Endpoint to delete data by ID
+app.delete("/temp/:id", (req, res) => {
+  const id = req.params.id;
+  // console.log(typeof +id)
+  const index = database2.findIndex((item) => item._id == +id);
+  console.log(index)
+  if (index !== -1) {
+    database2.splice(index, 1);
+    res.json({ message: "Item deleted successfully", data: database2 });
+  } else {
+    res.status(404).json({ message: "Item not found" });
+  }
+});
+
+app.put("/temp/:id", (req, res) => {
+  const id = req.params.id;
+  const index = database2.findIndex((item) => item._id === +id);
+  if (index !== -1) {
+    database2[index] = req.body; // Replace the item with the updated data
+    res.json({ message: "Item updated successfully", data: database2[index] });
+  } else {
+    res.status(404).json({ message: "Item not found" });
+  }
+});
 
 // Endpoint to retrieve visit count for specified endpoint
 app.get("/visit-counts", (req, res) => {
@@ -56,11 +97,21 @@ app.get("/", (req, res) => {
   res.json(selectedMovies);
 });
 
+app.get("/all", (req, res) => {
+  res.json(database1);
+});
+
+app.get("/quantity/:quantity", (req, res) => {
+  const quantityParams = parseInt(req.params.quantity);
+  const selectedMovies = database1.slice(0, quantityParams);
+  res.json(selectedMovies);
+});
+
 // Endpoint to retrieve a specific movie by ID
 app.get("/:id", (req, res) => {
   visitCounts["/:id"]++;
   const movieId = parseInt(req.params.id);
-  const movie = database1.find((m) => m.id === movieId);
+  const movie = database1.find((m) => m._id === movieId);
 
   if (!movie) {
     return res.status(404).json({ error: "Movie not found" });
