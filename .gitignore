@@ -22,6 +22,8 @@ _ignore
 prepros.config
 *dev*
 *backup*
+*temp*
+*tmp*
 # *data*.json
 
 # cpanel

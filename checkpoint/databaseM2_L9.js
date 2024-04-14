@@ -1,0 +1,161 @@
+module.exports = [
+  {
+    id: 901,
+    pregunta: "¿Cuál es la importancia principal de las bases de datos en el contexto de las aplicaciones informáticas?",
+    opciones: [
+      "Ofrecer acceso rápido y fiable a grandes volúmenes de información, facilitando la toma de decisiones informadas, mejorando la eficiencia operativa y permitiendo el desarrollo de aplicaciones escalables",
+      "Gestionar las solicitudes HTTP en el servidor",
+      "Controlar el acceso de los usuarios a las diferentes partes de la aplicación",
+      "Establecer la configuración global del servidor Express",
+    ],
+    respuestaCorrecta:
+      "Ofrecer acceso rápido y fiable a grandes volúmenes de información, facilitando la toma de decisiones informadas, mejorando la eficiencia operativa y permitiendo el desarrollo de aplicaciones escalables",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 902,
+    pregunta: "¿Qué son los datos en el contexto de la informática?",
+    opciones: [
+      "Representaciones simbólicas de un hecho o un concepto, como números, textos, valores alfanuméricos, o cualquier elemento que pueda almacenarse y ser procesado",
+      "Los resultados de las consultas realizadas en una base de datos",
+      "Las funciones que manipulan y procesan información en una aplicación informática",
+      "Los archivos almacenados en el disco duro de un ordenador",
+    ],
+    respuestaCorrecta:
+      "Representaciones simbólicas de un hecho o un concepto, como números, textos, valores alfanuméricos, o cualquier elemento que pueda almacenarse y ser procesado",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 903,
+    pregunta: "¿Qué es la información en el contexto de la informática?",
+    opciones: [
+      "El resultado del procesamiento de datos, cuando estos se organizan e interpretan de manera que adquieren un contexto y significado específicos",
+      "Los datos almacenados en una base de datos",
+      "El hardware de un sistema informático",
+      "Los programas que se ejecutan en un ordenador",
+    ],
+    respuestaCorrecta: "El resultado del procesamiento de datos, cuando estos se organizan e interpretan de manera que adquieren un contexto y significado específicos",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 904,
+    pregunta: "¿Cómo se define una base de datos en el contexto de la informática?",
+    opciones: [
+      "Como un conjunto organizado para recopilar, almacenar y gestionar datos de manera eficiente",
+      "Como un archivo de texto que contiene información importante para una aplicación",
+      "Como un servidor que aloja páginas web y responde a las solicitudes de los clientes",
+      "Como una herramienta de desarrollo utilizada para escribir código en lenguajes de programación",
+    ],
+    respuestaCorrecta: "Como un conjunto organizado para recopilar, almacenar y gestionar datos de manera eficiente",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 905,
+    pregunta: "¿Qué representa una entidad en el contexto de las bases de datos?",
+    opciones: [
+      "Una entidad representa un objeto o concepto del mundo real que puede ser identificado, almacenado y gestionado en una base de datos",
+      "Una entidad es una consulta que se realiza a una base de datos",
+      "Una entidad es un atributo de un objeto en un lenguaje de programación",
+      "Una entidad es una colección de datos almacenados en un archivo",
+    ],
+    respuestaCorrecta: "Una entidad representa un objeto o concepto del mundo real que puede ser identificado, almacenado y gestionado en una base de datos",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 906,
+    pregunta: "¿Cómo se denominan las características o propiedades de una entidad en el contexto de las bases de datos?",
+    opciones: ["Atributos", "Métodos", "Variables"],
+    respuestaCorrecta: "Atributos",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 907,
+    pregunta: "¿Cuál es el propósito principal de la normalización en el diseño de bases de datos?",
+    opciones: [
+      "Organizar la información de manera eficiente y reducir la redundancia, mejorando la integridad de los datos",
+      "Incrementar la redundancia en la base de datos para mejorar la velocidad de acceso a los datos",
+      "Aumentar la complejidad de las tablas de la base de datos para facilitar su gestión",
+      "Garantizar que los datos se almacenen de manera desorganizada y sin coherencia",
+    ],
+    respuestaCorrecta: "Organizar la información de manera eficiente y reducir la redundancia, mejorando la integridad de los datos",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.01 Introducción a bases de datos",
+  },
+  {
+    id: 908,
+    pregunta: "¿Por qué es fundamental la persistencia de datos en el desarrollo de software?",
+    opciones: [
+      "Porque nos permite almacenar y recuperar información a través del tiempo, incluso cuando un programa o aplicación haya terminado su ejecución por cierre o actualización",
+      "Porque nos permite ejecutar programas o aplicaciones de manera persistente en el tiempo",
+      "Porque nos permite optimizar la velocidad de acceso a los datos en tiempo real",
+    ],
+    respuestaCorrecta:
+      "Porque nos permite almacenar y recuperar información a través del tiempo, incluso cuando un programa o aplicación haya terminado su ejecución por cierre o actualización",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.02 Introducción a persistencia de datos",
+  },
+  {
+    id: 909,
+    pregunta: "¿Qué es un sistema de archivos en el contexto de un sistema operativo?",
+    opciones: [
+      "Una estructura utilizada para organizar y guardar datos en un dispositivo, como un disco duro o memoria USB, a través de carpetas y archivos",
+      "Un software que permite ejecutar programas y aplicaciones en un dispositivo",
+      "Una herramienta para gestionar la memoria RAM de un ordenador",
+      "Una base de datos utilizada para almacenar y recuperar información de manera eficiente",
+    ],
+    respuestaCorrecta: "Una estructura utilizada para organizar y guardar datos en un dispositivo, como un disco duro o memoria USB, a través de carpetas y archivos",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.02 Introducción a persistencia de datos",
+  },
+  {
+    id: 910,
+    pregunta: "¿Qué permite la API Web Storage nativa en los navegadores?",
+    opciones: [
+      "Permite tener un almacenamiento local y de sesión para que las aplicaciones puedan almacenar datos del lado del cliente utilizando Local Storage o Session Storage",
+      "Permite acceder y modificar los archivos del sistema de archivos del dispositivo",
+      "Permite gestionar las conexiones de red del dispositivo",
+      "Permite ejecutar aplicaciones web de manera offline sin conexión a internet",
+    ],
+    respuestaCorrecta:
+      "Permite tener un almacenamiento local y de sesión para que las aplicaciones puedan almacenar datos del lado del cliente utilizando Local Storage o Session Storage",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.02 Introducción a persistencia de datos",
+  },
+  {
+    id: 911,
+    pregunta: "¿Qué caracteriza al formato JSON en el contexto del desarrollo web?",
+    codigo: {
+      lag: "json",
+      snippet:
+        '{\n  "nombre": "Juan",\n  "edad": 30,\n  "ciudad": "Ciudad de Ejemplo",\n  "contacto": {\n    "email": "juan@example.com",\n    "telefono": "+123456789"\n  },\n  "intereses": ["programación", "viajes", "lectura"]\n}',
+    },
+    opciones: [
+      "Proporciona una estructura clara y legible para organizar datos, es ligero, utiliza una sintaxis legible por humanos y está basado en pares clave-valor",
+      "Es un formato binario optimizado para el almacenamiento eficiente de grandes volúmenes de datos",
+      "Es un formato propietario utilizado exclusivamente por ciertos navegadores web",
+      "Es un formato diseñado exclusivamente para el almacenamiento de imágenes y multimedia en páginas web",
+    ],
+    respuestaCorrecta: "Proporciona una estructura clara y legible para organizar datos, es ligero, utiliza una sintaxis legible por humanos y está basado en pares clave-valor",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.02 Introducción a persistencia de datos",
+  },
+  {
+    id: 912,
+    pregunta: "¿Por qué es importante utilizar formatos de almacenamiento adecuados en el desarrollo de aplicaciones?",
+    opciones: [
+      "Para garantizar que los datos se guarden y recuperen de manera eficiente",
+      "Para aumentar la complejidad de las aplicaciones y mejorar su rendimiento",
+      "Para reducir la cantidad de datos almacenados y mejorar la seguridad",
+      "Para simplificar el proceso de desarrollo de aplicaciones",
+    ],
+    respuestaCorrecta: "Para garantizar que los datos se guarden y recuperen de manera eficiente",
+    categoria: "Módulo 2: L-09 Database Fundamentals",
+    seccion: "09.02 Introducción a persistencia de datos",
+  },
+];

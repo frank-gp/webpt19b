@@ -42,9 +42,9 @@
         opacity: 0.3;
         cursor: not-allowed;
       }
-      h3 {
-        max-width: 45ch;
-      }
+      /* h3 {
+        max-width: 55ch;
+      } */
       .btn:hover,
       button:hover {
         color: white !important;
@@ -78,36 +78,16 @@
       pre {
         border: 1px solid #fff8;
       }
+      body .title {
+        font-size: 1em;
+        color: white;
+        opacity: 0.7;
+      }
     </style>
   </head>
   <body>
     <header></header>
     <main>
-      <section class="fgp_challenge_info" style="color: #fffc; text-align: center">
-        <h3 id="challengeText" style="display: none">CHALLENGE: lunes 25 de marzo <a class="btn" href="https://webpt19b.web.app/challenge">Mas info...</a></h3>
-        <style>
-          #challengeText {
-            text-align: center;
-            margin: 3em auto;
-            color: chartreuse;
-          }
-        </style>
-        <script>
-          // Get today's date
-          var currentDate = new Date();
-          // Target date (March 25th)
-          var targetDate = new Date(currentDate.getFullYear(), 2, 25); // Month is zero-based
-
-          // Check if the current date is on or before March 25th
-          if (currentDate >= targetDate) {
-            // If it is on or before March 25th, display the challenge text
-            document.getElementById("challengeText").style.display = "block";
-          } else {
-            // If it's after March 25th, hide the challenge text
-            document.getElementById("challengeText").style.display = "none";
-          }
-        </script>
-      </section>
       <h2>Simulacro Checkpoint</h2>
       <div class="containerButtons"></div>
       <br />
@@ -174,13 +154,16 @@
           // ========== localstorage1. ==========
 
           var jsonArrayButton = [
-            { url: baseURL + "/checkpoint/databaseCSS", label: "CSS" },
-            { url: baseURL + "/checkpoint/databaseJS", label: "JS" },
-            { url: baseURL + "/checkpoint/databaseBootstrap", label: "Bootstrap" },
-            { url: baseURL + "/checkpoint/databaseNodeJS", label: "NodeJS" },
-            { url: baseURL + "/checkpoint/databaseM1", label: "M1" },
-            { url: baseURL + "/checkpoint/databaseM2_L6", label: "M2_L6" },
-            { url: baseURL + "/checkpoint/databaseM2_L7", label: "M2_L7" },
+            // { url: baseURL + "/checkpoint/databaseCSS", label: "CSS" },
+            // { url: baseURL + "/checkpoint/databaseJS", label: "JS" },
+            // { url: baseURL + "/checkpoint/databaseBootstrap", label: "Bootstrap" },
+            // { url: baseURL + "/checkpoint/databaseNodeJS", label: "NodeJS" },
+            // { url: baseURL + "/checkpoint/databaseM1", label: "M1" },
+            { url: baseURL + "/checkpoint/databaseM2_L1", label: "L1" },
+            { url: baseURL + "/checkpoint/databaseM2_L6", label: "L6" },
+            { url: baseURL + "/checkpoint/databaseM2_L7", label: "L7" },
+            { url: baseURL + "/checkpoint/databaseM2_L8", label: "L8" },
+            { url: baseURL + "/checkpoint/databaseM2_L9", label: "L9" },
           ];
 
           function createButtons() {

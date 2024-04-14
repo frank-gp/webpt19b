@@ -189,4 +189,140 @@ module.exports = [
     categoria: "Módulo 2: L-07 Express",
     seccion: "05 Enrutado",
   },
+  {
+    id: 17,
+    pregunta: "¿Qué método se utiliza para crear un enrutador en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet: "// Enrutador de Usuarios\nconst enrutadorUsuarios = ",
+    },
+    opciones: ["express.Router()", "express.Server()", "express.Application()", "express.Middleware()"],
+    respuestaCorrecta: "express.Router()",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 18,
+    pregunta: "¿Qué se asocia con un método HTTP y uno de los métodos del controlador correspondiente en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet: '// Rutas para Usuarios\nenrutadorUsuarios.get("/", controladorUsuarios.obtenerUsuarios)\nenrutadorUsuarios.post("/", controladorUsuarios.crearUsuario)',
+    },
+    opciones: ["Rutas", "Controladores", "Enrutadores", "Middleware"],
+    respuestaCorrecta: "Rutas",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 19,
+    pregunta: "¿Qué sucede al incorporar un enrutador de Usuarios en el enrutador principal de la aplicación en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet: '// Enrutador principal \nconst enrutadorPrincipal = express.Router()\n\n//Uso del enrutador de Usuarios\nenrutadorPrincipal.use("/usuarios", enrutadorUsuarios)',
+    },
+    opciones: [
+      "Todas las solicitudes dirigidas a '/usuarios' serán manejadas por el enrutador de usuarios",
+      "Las solicitudes a '/usuarios' serán redirigidas al enrutador principal de la aplicación",
+      "Se eliminarán todas las solicitudes dirigidas a '/usuarios'",
+    ],
+    respuestaCorrecta: "Todas las solicitudes dirigidas a '/usuarios' serán manejadas por el enrutador de usuarios",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 20,
+    pregunta: "¿Qué función tiene <br>router.use('/usuarios', usuariosRouter) <br>en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet:
+        '// Enrutador de usuarios.js\nconst express = require("express")\nconst router = express.Router()\n\nrouter.get("/",(req, res)=>{\n    res.send("Módulo de Usuarios")\n})\n\nmodule.exports = router\n\n// Enrutador index.js\nconst express = require("express")\nconst router = express.Router()\n\nconst usuariosRouter = require("./usarios")\n\nrouter.use("./usuarios", usuariosRouter)\n\nmodule.exports = router',
+    },
+    opciones: [
+      "Indicar que todas las solicitudes que comienzan con '/usuarios' deben ser dirigidas al enrutador de usuarios",
+      "Especificar el punto de entrada principal de la aplicación",
+      "Crear un nuevo enrutador llamado 'usuariosRouter'",
+    ],
+    respuestaCorrecta: "Indicar que todas las solicitudes que comienzan con '/usuarios' deben ser dirigidas al enrutador de usuarios",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 21,
+    pregunta: "¿Cuál es el propósito principal de los enrutadores index en Express?",
+    opciones: [
+      "Actuar como puntos de entrada principales para diferentes secciones de una aplicación",
+      "Definir rutas específicas para cada sección de la aplicación",
+      "Organizar las rutas en una estructura jerárquica",
+    ],
+    respuestaCorrecta: "Actuar como puntos de entrada principales para diferentes secciones de una aplicación",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 22,
+    pregunta: "En Express, ¿cuál es el propósito de los objetos 'req' y 'res' en la función de un controlador?",
+    opciones: [
+      "Representan el objeto de solicitud (request) y el objeto de respuesta (response) respectivamente, permitiendo al controlador interactuar con los datos de la solicitud y enviar una respuesta al cliente",
+      "Representan el objeto de respuesta (response) y el objeto de solicitud (request) respectivamente, permitiendo al controlador interactuar con los datos de la respuesta y enviar una solicitud al cliente",
+      "Son utilizados únicamente para autenticación y autorización de usuarios en la aplicación",
+
+      "Actúan como variables locales dentro de la función del controlador para almacenar datos temporales durante la ejecución del código",
+    ],
+    respuestaCorrecta:
+      "Representan el objeto de solicitud (request) y el objeto de respuesta (response) respectivamente, permitiendo al controlador interactuar con los datos de la solicitud y enviar una respuesta al cliente",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 23,
+    pregunta: "¿Cuál es la función principal del método de respuesta 'send()' en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet: 'router.get("/",(req, res)=>{\n    res.send("Hello World")\n})',
+    },
+    opciones: [
+      "Enviar una respuesta al cliente, que puede ser un objeto, una cadena de texto o un archivo",
+      "Recibir y procesar datos de un formulario HTML",
+      "Definir las rutas de la aplicación web",
+      "Establecer la configuración del servidor Express",
+    ],
+    respuestaCorrecta: "Enviar una respuesta al cliente, que puede ser un objeto, una cadena de texto o un archivo",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+
+  {
+    id: 24,
+    pregunta: "¿Qué función cumplen los métodos HTTP en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet:
+        "// Ruta y método GET\napp.get('/', (req, res) => {\n  res.send('Hola, mundo!');\n});\n\n// Ruta y método POST\napp.post('/usuarios', (req, res) => {\n  res.send('Usuario creado');\n});",
+    },
+    opciones: [
+      "Definir la acción que se realizará en una solicitud específica",
+      "Gestionar la autenticación de usuarios en la aplicación",
+      "Controlar el acceso de los usuarios a las diferentes partes de la aplicación",
+      "Establecer la configuración del servidor Express",
+    ],
+    respuestaCorrecta: "Definir la acción que se realizará en una solicitud específica",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
+  {
+    id: 25,
+    pregunta: "¿Cuál es el propósito principal de los enrutadores por entidad en Express?",
+    codigo: {
+      lag: "javascript",
+      snippet: 'router.use("/users", userRouter);\nrouter.use("/posts", postRouter);',
+    },
+    opciones: [
+      "Gestionar rutas relacionadas con una entidad específica, como Usuarios o Productos",
+      "Controlar el acceso de los usuarios a las diferentes partes de la aplicación",
+      "Establecer la configuración global del servidor Express",
+    ],
+    respuestaCorrecta: "Gestionar rutas relacionadas con una entidad específica, como Usuarios o Productos",
+    categoria: "Módulo 2: L-07 Express",
+    seccion: "05 Enrutado",
+  },
 ];
