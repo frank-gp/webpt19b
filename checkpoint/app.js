@@ -110,6 +110,14 @@ app.get("/databaseM2_L1", (req, res) => {
   const selectedMovies = shuffledData.slice(0, requestedQuantity);
   res.json(selectedMovies);
 });
+const databaseM2_L2 = require("./databaseM2_L2.js");
+app.get("/databaseM2_L2", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 24; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM2_L2]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
 
 const databaseM2_L6 = require("./databaseM2_L6.js");
 app.get("/databaseM2_L6", (req, res) => {
