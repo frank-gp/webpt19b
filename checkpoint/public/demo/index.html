@@ -78,7 +78,8 @@
       pre {
         border: 1px solid #fff8;
       }
-      body .title {
+      body .categoria,
+      body .seccion {
         font-size: 1em;
         color: white;
         opacity: 0.7;
@@ -91,7 +92,8 @@
       <h2>Simulacro Checkpoint</h2>
       <div class="containerButtons"></div>
       <br />
-      <h1 class="title"></h1>
+      <h1 class="categoria"></h1>
+      <h3 class="seccion"></h3>
       <br />
       <form id="examenForm">
         <div id="preguntaContainer"></div>
@@ -197,7 +199,8 @@
               mostrarPregunta(preguntaActualIndex);
               if (preguntas[0].categoria) {
                 // console.log(preguntas[0].categoria);
-                document.querySelector(".title").innerHTML += preguntas[0].categoria;
+                document.querySelector(".categoria").innerHTML += preguntas[0].categoria;
+                document.querySelector(".seccion").innerHTML += preguntas[0].seccion;
               }
               import("https://frankgp.com/lib/highlight.js");
             });
@@ -273,7 +276,7 @@
                 }, 3000);
               } else {
                 resultadoElement.innerHTML = `🎉 Tu puntuación final es: ${respuestasCorrectas}/${preguntas.length}<br>¡Felicidades, has completado el examen! 💎<br>`;
-                submit_btn.disabled = true;
+                // submit_btn.disabled = true;
                 icono_respuesta.style.display = "block";
                 icono_respuesta.textContent = `🎉🏆🥇`;
 
@@ -285,7 +288,7 @@
               resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ❌`;
               icono_respuesta.textContent = `❌`;
               icono_respuesta.style.display = "block";
-              submit_btn.disabled = true;
+              // submit_btn.disabled = true;
               // setTimeout(function () {
               //   icono_respuesta.style.display = "none";
               // }, 3000);
