@@ -11,7 +11,7 @@ module.exports = [
     respuestaCorrecta:
       "Es el pedazo de la aplicación que se enfoca en la interacción con los usuarios, presentación de información útil, definición de la visualización de datos y gestión de las interacciones de estos con la aplicación",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.01 Frontend",
+    seccion: "01 Frontend",
   },
   {
     id: 102,
@@ -23,7 +23,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Es la parte encargada de la lógica de la aplicación y la gestión de bases de datos",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.02 Backend",
+    seccion: "02 Backend",
   },
   {
     id: 103,
@@ -37,7 +37,7 @@ module.exports = [
     respuestaCorrecta:
       "El servidor es una porción del backend que se encarga de operar solicitudes de un cliente, mientras que el backend es un conjunto de piezas como el servidor, base de datos, lógica de negocio, etc.",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.02 Backend",
+    seccion: "02 Backend",
   },
   {
     id: 104,
@@ -49,7 +49,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Es el conjunto de herramientas y recursos utilizados para desarrollar y ejecutar aplicaciones de software",
     categoria: "Módulo 3: L1 Entorno de ejecución",
-    seccion: "01.02 Backend",
+    seccion: "02 Backend",
   },
   {
     id: 105,
@@ -62,7 +62,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Proporcionar una estructura y conjunto de herramientas predefinidas para facilitar el desarrollo de aplicaciones",
     categoria: "Módulo 3: L2 Frameworks",
-    seccion: "01.02 Backend",
+    seccion: "02 Backend",
   },
   {
     id: 106,
@@ -75,7 +75,7 @@ module.exports = [
     ],
     respuestaCorrecta: "ODM se refiere a Object Data Mapping, mientras que ORM se refiere a Object-Relational Mapping",
     categoria: "Módulo 3: L3 ODM/ORM",
-    seccion: "01.02 Backend",
+    seccion: "02 Backend",
   },
   {
     id: 107,
@@ -89,7 +89,7 @@ module.exports = [
     respuestaCorrecta:
       "Define el conjunto de reglas y protocolos que permiten que dos sistemas se comuniquen entre sí, independientemente de las tecnologías utilizadas en cada uno de ellos",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 108,
@@ -102,7 +102,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Dictan cómo debe realizarse la solicitud de información de un cliente a un servidor, y cómo este deberá estructurar las respuestas",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 109,
@@ -115,7 +115,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Es un estilo de arquitectura para diseñar una API basado en principios fundamentales de simplicidad y escalabilidad",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 110,
@@ -128,7 +128,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Cualquier información que tenga sentido para el sistema, como un objeto, un servicio o incluso una entidad abstracta",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 111,
@@ -136,7 +136,7 @@ module.exports = [
     opciones: ["Crear, Leer, Actualizar, Eliminar", "Crear, Recordar, Modificar, Borrar", "Incluir, Obtener, mostrar, Borrar", "Insertar, Leer, Editar, actualizar"],
     respuestaCorrecta: "Crear, Leer, Actualizar, Eliminar",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 112,
@@ -144,7 +144,7 @@ module.exports = [
     opciones: ["En algún formato de representación, comúnmente en JSON o XML", "Utilizando un lenguaje de marcado como HTML", "Mediante un formato binario"],
     respuestaCorrecta: "En algún formato de representación, comúnmente en JSON o XML",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 113,
@@ -157,7 +157,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Proporcionan una forma de acceder y manipular un recurso específico",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 114,
@@ -171,7 +171,7 @@ module.exports = [
     respuestaCorrecta:
       "Cada solicitud del cliente al servidor contiene toda la información necesaria para entender y procesar la solicitud, sin información de estado almacenada en el servidor entre las solicitudes",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 118,
@@ -186,7 +186,7 @@ module.exports = [
     respuestaCorrecta:
       "Una API define un conjunto de reglas y protocolos para la comunicación entre sistemas, mientras que REST es un estilo arquitectónico que define cómo deben diseñarse las API para ser simples y escalables",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 119,
@@ -194,7 +194,7 @@ module.exports = [
     opciones: ["Representational State Transfer", "Real-time Server Transmission", "Resource Extraction and State Transmission", "Remote Entity Service Transfer"],
     respuestaCorrecta: "Representational State Transfer",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.03 API",
+    seccion: "03 API",
   },
   {
     id: 115,
@@ -206,7 +206,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Facilita la comunicación entre computadoras compartiendo recursos e información",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 116,
@@ -219,7 +219,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Modelo OSI (Open System Interconnection)",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 117,
@@ -232,7 +232,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Define siete capas, y la capa de Red (Network Layer) es responsable de la comunicación entre computadoras en una red",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 120,
@@ -240,7 +240,7 @@ module.exports = [
     opciones: ["Hypertext Transfer Protocol", "Highway Transfer Protocol", "Home Transfer Protocol", "Hyperlink Transmission Protocol"],
     respuestaCorrecta: "Hypertext Transfer Protocol",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 121,
@@ -248,7 +248,7 @@ module.exports = [
     opciones: ["Transmisión de datos entre dispositivos conectados a la red", "Interconexión de dispositivos", "Codificación de datos", "Compresión de archivos"],
     respuestaCorrecta: "Transmisión de datos entre dispositivos conectados a la red",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 122,
@@ -256,7 +256,7 @@ module.exports = [
     opciones: ["Mediante Métodos HTTP", "Mediante Status HTTP", "Mediante Protocolos HTTP", "Mediante Encabezados HTTP"],
     respuestaCorrecta: "Mediante Métodos HTTP",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 123,
@@ -264,7 +264,7 @@ module.exports = [
     opciones: ["GET, POST, PUT, DELETE", "SEARCH, CREATE, UPDATE, DELETE", "FETCH, SUBMIT, MODIFY, REMOVE", "REQUEST, RECEIVE, UPDATE, DELETE"],
     respuestaCorrecta: "GET, POST, PUT, DELETE",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 124,
@@ -272,7 +272,7 @@ module.exports = [
     opciones: ["Para recuperar datos del servidor", "Para enviar datos al servidor", "Para actualizar datos en el servidor", "Para eliminar datos del servidor"],
     respuestaCorrecta: "Para recuperar datos del servidor",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
   {
     id: 125,
@@ -280,7 +280,7 @@ module.exports = [
     opciones: ["Para enviar datos al servidor", "Para recuperar datos del servidor", "Para actualizar datos en el servidor", "Para eliminar datos del servidor"],
     respuestaCorrecta: "Para enviar datos al servidor",
     categoria: "Módulo 2: L1 Proyecto Full Stack",
-    seccion: "01.04 HTTP Protocol",
+    seccion: "04 HTTP Protocol",
   },
 ];
-// seccion: "01.04 HTTP Protocol",
+// seccion: "04 HTTP Protocol",

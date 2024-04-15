@@ -11,7 +11,7 @@ module.exports = [
     respuestaCorrecta:
       "Ofrecer acceso rápido y fiable a grandes volúmenes de información, facilitando la toma de decisiones informadas, mejorando la eficiencia operativa y permitiendo el desarrollo de aplicaciones escalables",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 902,
@@ -25,7 +25,7 @@ module.exports = [
     respuestaCorrecta:
       "Representaciones simbólicas de un hecho o un concepto, como números, textos, valores alfanuméricos, o cualquier elemento que pueda almacenarse y ser procesado",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 903,
@@ -38,7 +38,7 @@ module.exports = [
     ],
     respuestaCorrecta: "El resultado del procesamiento de datos, cuando estos se organizan e interpretan de manera que adquieren un contexto y significado específicos",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 904,
@@ -51,7 +51,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Como un conjunto organizado para recopilar, almacenar y gestionar datos de manera eficiente",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 905,
@@ -64,7 +64,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Una entidad representa un objeto o concepto del mundo real que puede ser identificado, almacenado y gestionado en una base de datos",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 906,
@@ -72,7 +72,7 @@ module.exports = [
     opciones: ["Atributos", "Métodos", "Variables"],
     respuestaCorrecta: "Atributos",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 907,
@@ -85,7 +85,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Organizar la información de manera eficiente y reducir la redundancia, mejorando la integridad de los datos",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.01 Introducción a bases de datos",
+    seccion: "01 Introducción a bases de datos",
   },
   {
     id: 908,
@@ -98,7 +98,7 @@ module.exports = [
     respuestaCorrecta:
       "Porque nos permite almacenar y recuperar información a través del tiempo, incluso cuando un programa o aplicación haya terminado su ejecución por cierre o actualización",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.02 Introducción a persistencia de datos",
+    seccion: "02 Introducción a persistencia de datos",
   },
   {
     id: 909,
@@ -111,7 +111,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Una estructura utilizada para organizar y guardar datos en un dispositivo, como un disco duro o memoria USB, a través de carpetas y archivos",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.02 Introducción a persistencia de datos",
+    seccion: "02 Introducción a persistencia de datos",
   },
   {
     id: 910,
@@ -125,7 +125,7 @@ module.exports = [
     respuestaCorrecta:
       "Permite tener un almacenamiento local y de sesión para que las aplicaciones puedan almacenar datos del lado del cliente utilizando Local Storage o Session Storage",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.02 Introducción a persistencia de datos",
+    seccion: "02 Introducción a persistencia de datos",
   },
   {
     id: 911,
@@ -143,7 +143,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Proporciona una estructura clara y legible para organizar datos, es ligero, utiliza una sintaxis legible por humanos y está basado en pares clave-valor",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.02 Introducción a persistencia de datos",
+    seccion: "02 Introducción a persistencia de datos",
   },
   {
     id: 912,
@@ -156,6 +156,6 @@ module.exports = [
     ],
     respuestaCorrecta: "Para garantizar que los datos se guarden y recuperen de manera eficiente",
     categoria: "Módulo 2: L-09 Database Fundamentals",
-    seccion: "09.02 Introducción a persistencia de datos",
+    seccion: "02 Introducción a persistencia de datos",
   },
 ];

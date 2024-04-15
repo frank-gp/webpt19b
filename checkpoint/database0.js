@@ -6,7 +6,8 @@ const databaseCSS = [
     pregunta: "¿Cuál es el propósito principal de los enrutadores por entidad en Express?",
     codigo: {
       lag: "javascript",
-      snippet: 'router.use("/users", userRouter);\nrouter.use("/posts", postRouter);',
+      snippet: 'https://jsonplaceholder.typicode.com/users',
+
     },
     opciones: [
       "Gestionar rutas relacionadas con una entidad específica, como Usuarios o Productos",
@@ -15,7 +16,7 @@ const databaseCSS = [
     ],
     respuestaCorrecta: "Gestionar rutas relacionadas con una entidad específica, como Usuarios o Productos",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.01 Servicios",
+    seccion: "01 Servicios",
   },
 ];
 
