@@ -10,7 +10,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Un segmento específico de lógica de negocio que brinda servicio a una funcionalidad particular de la aplicación",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.01 Servicios",
+    seccion: "01 Servicios",
   },
   {
     id: 802,
@@ -23,7 +23,7 @@ module.exports = [
     respuestaCorrecta:
       "Los controladores manejan solicitudes y respuestas específicas del servidor, mientras que los servicios se encargan de tareas más amplias y especializadas, como la autenticación y la gestión de bases de datos",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.01 Servicios",
+    seccion: "01 Servicios",
   },
   {
     id: 803,
@@ -36,7 +36,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Realizar acciones específicas entre el flujo de una solicitud y su respuesta, teniendo acceso a los objetos req, res y next",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.02 Middlewares",
+    seccion: "02 Middlewares",
   },
   {
     id: 804,
@@ -50,7 +50,7 @@ module.exports = [
     respuestaCorrecta:
       "Los middlewares permiten realizar acciones globales antes de llegar a rutas específicas, lo que proporciona una mayor flexibilidad en la realización de tareas a lo largo de todo el flujo de la aplicación",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.02 Middlewares",
+    seccion: "02 Middlewares",
   },
   {
     id: 805,
@@ -63,7 +63,7 @@ module.exports = [
     respuestaCorrecta:
       "Cuando se desea agregar funcionalidades específicas, manipular datos de solicitud o respuesta, o realizar acciones antes o después de que la solicitud llegue a su destino",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.02 Middlewares",
+    seccion: "02 Middlewares",
   },
   {
     id: 806,
@@ -71,7 +71,7 @@ module.exports = [
     opciones: ["En pre-built (pre-construidos) y personalizados (customizados)", "En estáticos y dinámicos", "En síncronos y asíncronos"],
     respuestaCorrecta: "En pre-built (pre-construidos) y personalizados (customizados)",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.02 Middlewares",
+    seccion: "02 Middlewares",
   },
   {
     id: 807,
@@ -84,7 +84,7 @@ module.exports = [
     ],
     respuestaCorrecta: "Confirmar que la información tenga el formato y estructura correctos",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.03 Validaciones",
+    seccion: "03 Validaciones",
   },
   {
     id: 808,
@@ -96,6 +96,6 @@ module.exports = [
     ],
     respuestaCorrecta: "Creando middlewares personalizados que verifiquen los datos de entrada antes de pasarlos a la lógica principal de la aplicación",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.03 Validaciones",
+    seccion: "03 Validaciones",
   },
 ];

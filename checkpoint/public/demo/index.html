@@ -78,7 +78,8 @@
       pre {
         border: 1px solid #fff8;
       }
-      body .title {
+      body .categoria,
+      body .seccion {
         font-size: 1em;
         color: white;
         opacity: 0.7;
@@ -91,8 +92,7 @@
       <h2>Simulacro Checkpoint</h2>
       <div class="containerButtons"></div>
       <br />
-      <h1 class="title"></h1>
-      <br />
+      <h1 class="categoria"></h1>
       <form id="examenForm">
         <div id="preguntaContainer"></div>
         <button type="submit" class="submit_btn">Enviar respuesta</button>
@@ -161,6 +161,7 @@
             // { url: baseURL + "/checkpoint/databaseM1", label: "M1" },
             { url: baseURL + "/checkpoint/databaseM2_L1", label: "L1" },
             { url: baseURL + "/checkpoint/databaseM2_L2", label: "L2" },
+            { url: baseURL + "/checkpoint/databaseM2_L3", label: "L3" },
             { url: baseURL + "/checkpoint/databaseM2_L6", label: "L6" },
             { url: baseURL + "/checkpoint/databaseM2_L7", label: "L7" },
             { url: baseURL + "/checkpoint/databaseM2_L8", label: "L8" },
@@ -200,7 +201,7 @@
               mostrarPregunta(preguntaActualIndex);
               if (preguntas[0].categoria) {
                 // console.log(preguntas[0].categoria);
-                document.querySelector(".title").innerHTML += preguntas[0].categoria;
+                document.querySelector(".categoria").innerHTML += preguntas[0].categoria;
               }
               import("https://frankgp.com/lib/highlight.js");
             });
@@ -215,6 +216,9 @@
             const opcionesAleatorias = pregunta.opciones.slice().sort(() => Math.random() - 0.5);
 
             preguntaDiv.innerHTML = `
+            <p>${pregunta.seccion}</p>
+            <p>id: ${pregunta.id}</p>
+            <br><br><br>
     <h3>${pregunta.pregunta}</h3>
     ${
       pregunta.codigo
@@ -276,7 +280,7 @@
                 }, 3000);
               } else {
                 resultadoElement.innerHTML = `🎉 Tu puntuación final es: ${respuestasCorrectas}/${preguntas.length}<br>¡Felicidades, has completado el examen! 💎<br>`;
-                submit_btn.disabled = true;
+                // submit_btn.disabled = true;
                 icono_respuesta.style.display = "block";
                 icono_respuesta.textContent = `🎉🏆🥇`;
 
@@ -288,7 +292,7 @@
               resultadoElement.textContent = `Tu puntaje actual es: ${respuestasCorrectas}/${preguntas.length} ❌`;
               icono_respuesta.textContent = `❌`;
               icono_respuesta.style.display = "block";
-              submit_btn.disabled = true;
+              // submit_btn.disabled = true;
               // setTimeout(function () {
               //   icono_respuesta.style.display = "none";
               // }, 3000);

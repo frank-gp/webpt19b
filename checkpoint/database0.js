@@ -16,7 +16,7 @@ const databaseCSS = [
     ],
     respuestaCorrecta: "Gestionar rutas relacionadas con una entidad específica, como Usuarios o Productos",
     categoria: "Módulo 2: L-08 Express 2",
-    seccion: "08.01 Servicios",
+    seccion: "01 Servicios",
   },
 ];
 
