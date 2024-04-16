@@ -155,6 +155,23 @@ app.get("/databaseM2_L9", (req, res) => {
   res.json(selectedMovies);
 });
 
+const databaseM2_L10 = require("./databaseM2_L10.js");
+app.get("/databaseM2_L10", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 24; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM2_L10]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
+
+const databaseM2_L11 = require("./databaseM2_L11.js");
+app.get("/databaseM2_L11", (req, res) => {
+  visitCounts["/"]++;
+  const requestedQuantity = parseInt(req.query.quantity) || 24; // Default to 16 if quantity is not provided
+  const shuffledData = shuffleArray([...databaseM2_L11]);
+  const selectedMovies = shuffledData.slice(0, requestedQuantity);
+  res.json(selectedMovies);
+});
 // Endpoint to retrieve a specific movie by ID
 app.get("/:id", (req, res) => {
   visitCounts["/:id"]++;
