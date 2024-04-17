@@ -87,7 +87,6 @@
     </style>
   </head>
   <body>
-    <p>Prueba1</p>
     <header></header>
 
     <main>
@@ -164,6 +163,8 @@
             { url: baseURL + "/checkpoint/databaseM2_L1", label: "L1" },
             { url: baseURL + "/checkpoint/databaseM2_L2", label: "L2" },
             { url: baseURL + "/checkpoint/databaseM2_L3", label: "L3" },
+            { url: baseURL + "/checkpoint/databaseM2_L4", label: "L4" },
+            { url: baseURL + "/checkpoint/databaseM2_L5", label: "L5" },
             { url: baseURL + "/checkpoint/databaseM2_L6", label: "L6" },
             { url: baseURL + "/checkpoint/databaseM2_L7", label: "L7" },
             { url: baseURL + "/checkpoint/databaseM2_L8", label: "L8" },
@@ -173,6 +174,7 @@
             { url: baseURL + "/checkpoint/databaseM2_L12", label: "L12" },
             { url: baseURL + "/checkpoint/databaseM2_L13", label: "L13" },
             { url: baseURL + "/checkpoint/databaseM2_L14", label: "L14" },
+            { url: baseURL + "/checkpoint/databasekahoot", label: "kahoot" },
           ];
 
           function createButtons() {
@@ -289,8 +291,8 @@
                 icono_respuesta.style.display = "block";
                 icono_respuesta.textContent = `🎉🏆🥇`;
 
-                var reload_button = document.querySelector(".reload");
-                reload_button.style.display = "block";
+                // var reload_button = document.querySelector(".reload");
+                // reload_button.style.display = "block";
               }
             } else {
               // mostrarPregunta(preguntaActualIndex);
@@ -302,8 +304,8 @@
               //   icono_respuesta.style.display = "none";
               // }, 3000);
 
-              var reload_button = document.querySelector(".reload");
-              reload_button.style.display = "block";
+              // var reload_button = document.querySelector(".reload");
+              // reload_button.style.display = "block";
 
               document.querySelector("#resultado").style.color = "red";
             }

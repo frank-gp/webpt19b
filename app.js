@@ -14,6 +14,10 @@ mainApp.use("/checkpoint", checkpoint);
 const crud = require("./crud/app.js");
 mainApp.use("/crud", crud);
 
+mainApp.get("/", (req, res) => {
+  res.redirect("/checkpoint/demo/");
+})
+
 const PORT = process.env.PORT || 3000;
 mainApp.listen(PORT, () => {
   console.log(`Main App listening on port http://localhost:${PORT}`);
